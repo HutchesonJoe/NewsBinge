@@ -2,10 +2,13 @@ import React from "react";
 import Search from "./Search";
 import NewsWindow from "./NewsWindow"
 
-function BingeContainter(){
+function BingeContainer({articles}){
+  console.log(articles)
   return ( 
-    <Search />
-    <NewsWindow />
+    <div>
+      <Search />
+      <NewsWindow />
+    </div>
 )}
 
-export default BingeContainter
+export default BingeContainer

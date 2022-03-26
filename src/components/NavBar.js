@@ -1,18 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
+import { NavLink } from "react-router-dom";
 
-function NavBar(){
-
-fetch ("https://newsapi.org/v2/top-headlines?country=us&apiKey=f54a02baacfc4187b26c3a5bee3f7774")
-  .then (r=>r.json())
-  .then (data=>console.log(data.articles))
+function NavBar({articles}){
 
  return (
-   <div>NavBar
-     <ul>
-       <li>Binge</li>
-       <li>Follow Tweets</li>
-       <li>Visit Api</li>
-     </ul>
+   <div className = "NavBar">
+     <NavLink to = "/bingecontainer" className = "link" articles={articles}>Binge</NavLink>
+     <NavLink to = "/followtweets" className = "link">Follow API Tweets</NavLink>
+     <NavLink to = "/visitapi" className = "link">Visit News API</NavLink>
    </div>
  )
 }
