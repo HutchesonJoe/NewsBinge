@@ -7,7 +7,7 @@ function BingeContainer({articles}){
   return ( 
     <div>
       <Search />
-      <NewsWindow />
+      <NewsWindow articles={articles}/>
     </div>
 )}
 

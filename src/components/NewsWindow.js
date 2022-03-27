@@ -1,8 +1,14 @@
 import React from "react";
+import ArticleList from "./ArticleList";
+import ArticleWindow from "./ArticleWindow";
 
-function NewsWindow(){
+function NewsWindow({articles}){
   return(
-    <div>This is NewsWindow</div>
+    <div>
+       <ArticleList articles={articles}/>
+        <ArticleWindow/>
+    </div>
+   
   )
 }
 

@@ -30,13 +30,28 @@ body {
   color: white;
 }
 
+.article-list{
+  border-style: groove;
+  border-color: black;
+  width: 50%;
+}
+.article{
+  border-style: dotted;
+  border-width: 2px;
+  border-color: gray;
+}
+
+.articleWindow{
+  width: 50%
+}
+
 .feature-box{
   padding: 10px;
   align-items: center;
   border-style: double;
   border-color: black;
   border-width: 2px;
-  max-width: 300px;
+  width: 100%
 }
 .feature-image {
   align-self: center;
