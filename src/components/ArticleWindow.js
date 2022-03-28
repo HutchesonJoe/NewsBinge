@@ -13,7 +13,7 @@ function ArticleWindow({article}){
         <h5>{article.content}</h5>
         <h6><em>For more, visit:</em></h6>
         <h6><a href={article.url} target = "_blank">{article.source.name}</a></h6>
-        <img src = {article.urlToImage} className="feature-image"/>
+        <img src = {article.urlToImage} className = "chosen-article-image"/>
       </div>
       )
   }

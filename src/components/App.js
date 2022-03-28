@@ -19,7 +19,7 @@ function App(){
   )
  
   return (
-    <Fragment>
+    <div>
       <Header />
       <NavBar className="NavBar"/>
       <Routes>
@@ -31,7 +31,7 @@ function App(){
         </Route>
       </Routes>
       <FeaturedArticle articles={articles}/>
-    </Fragment>
+    </div>
   )
 }
 

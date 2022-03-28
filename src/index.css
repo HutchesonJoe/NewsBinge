@@ -32,12 +32,13 @@ body {
 
 .news-window{
   display: inline-block;
+  width: 100%;
 }
 
 .article-list{
   border-style: groove;
   border-color: black;
-  width: 50%;
+  width: 25%;
   float: left;
 }
 .article{
@@ -46,8 +47,12 @@ body {
   border-color: gray;
 }
 
-.articleWindow{
-  width: 50%
+.article-window{
+  width: 70%;
+  border-style: dotted;
+  border-width: 2px;
+  border-color: gray;
+  float: right;
 }
 
 .feature-box{
@@ -59,8 +64,15 @@ body {
   width: 100%
 }
 .feature-image {
-  align-self: center;
+
   width: 100%
+}
+
+.chosen-article-image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 .thumbnail {
