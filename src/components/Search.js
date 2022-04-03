@@ -1,15 +1,16 @@
 import React from "react"; 
 
-function Search(){
-
-  function handleChange(e){
+function Search({setSearchTerm}){
+  function handleSearchChange(e){
     console.log(e.target.value)
+    setSearchTerm(e.target.value.toLowerCase())
   }
   return (
     <div>
-      <form>
-      <input type = "search" placeholder = "Search term..." onChange={handleChange}></input>
+      <form className = "search-form">
+      <input type = "search" className="search" placeholder = "Search by term..." onChange={handleSearchChange}></input>
       </form>
+     
     </div>
   )
 }

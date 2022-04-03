@@ -1,16 +1,21 @@
-import React from "react"
+import React, { useState } from "react"
 
 function Article({article, handleChooseArticle}){
-
+  const [read, setRead] = useState(false)
   function handleClick(){
     handleChooseArticle(article)
+    setRead(!read)
   }
 
   return (
-    <div className="article" onClick={handleClick}>
+    <div className={read ? "read-article" : "article"} onClick={handleClick}>
       <h4>{article.title}</h4>
-      <h5>{article.author ? article.author : "Staff"}, <em>{article.source.name}</em></h5>
       <img src={article.urlToImage} alt="No image available" className="thumbnail"/>
+      <h5>{article.author ? article.author : "Staff"}, <em>{article.source.name}</em></h5>
+      <h6>{article.publishedAt}</h6>
+      <div className="mark-unread"><em>{read ? "Click article to mark unread" : ""}</em></div>
+
+      
     </div>
   )
 }

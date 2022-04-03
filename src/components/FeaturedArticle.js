@@ -1,26 +1,29 @@
 import React from "react";
+import SaveArticle from "./SaveArticle";
 
-function FeaturedArticle({articles}){
-  const randomInt = function (min, max) {
-    min = Math.ceil(0);
-    max = Math.floor(19);
-    return Math.floor(Math.random() * 19)
-  }
-  const featured = articles[randomInt()]
- 
-  if (featured === undefined){
+function FeaturedArticle({featuredArticle}){
+  if (featuredArticle === null){
     return (
       <div>Loading...</div>
-    )} else {
-     
+    )
+  } else if (featuredArticle === undefined){
+      return (
+        <div>Loading...</div>
+      )
+    } else {
     return (
       <div className="feature-box">
-        <h2><em>Featured Article:</em></h2>
-        <h2 className = "title">{featured.title}</h2>
-        <h3 className = "source"><em>{featured.source.name}</em></h3>
-        <img src = {featured.urlToImage} className="feature-image"/>
-        <h4 className = "author">{featured.author}</h4>
-        <h5 className = "description">{featured.description}</h5>
+        
+          <header className="sub-header"><em>Featured Article:</em></header>
+          <h3 className = "title">{featuredArticle.title}</h3>
+          <h4 className = "source"><em>{featuredArticle.source.name}</em></h4>
+          <h5 className = "author">{featuredArticle.author ? featuredArticle.author : "Staff"}</h5>
+          <h6>{featuredArticle.publishedAt}</h6>
+          <h6 className = "description">{featuredArticle.description}</h6>
+          <img src = {featuredArticle.urlToImage} className="feature-image" alt = "No image available"/>
+          <h6><em>For more, visit:</em></h6>
+          <h6><a href={featuredArticle.url} target = "_blank">{featuredArticle.source.name}</a></h6>
+          <SaveArticle article = {featuredArticle}/>
       </div>
       )
 

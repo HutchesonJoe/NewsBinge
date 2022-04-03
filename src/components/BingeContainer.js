@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Search from "./Search";
 import NewsWindow from "./NewsWindow"
 
-function BingeContainer({articles}){
-  console.log(articles)
+function BingeContainer({articles, setSearchTerm, featuredArticle}){
+
+ 
   return ( 
     <div>
-      <Search />
-      <NewsWindow articles={articles}/>
+      <Search setSearchTerm={setSearchTerm}/>
+      <NewsWindow articles={articles} featuredArticle={featuredArticle}/>
     </div>
 )}
 
