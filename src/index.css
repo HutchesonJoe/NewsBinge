@@ -28,7 +28,7 @@ body {
 
 .NavBar {
   
-  font-size: x-large;
+  font-size: large;
   text-decoration: underline ;
   background-color: rgb(94, 94, 110);
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
@@ -38,12 +38,14 @@ body {
 a {
   color: black;
 }
+
 .link {
   display: inline-block;
   text-align: center;
-  width: 25%;
+  width: 23%;
   padding: 6px;
-  margin: 0 6px 6px;
+  margin-left: auto;
+  margin-right: auto;
   text-decoration: bold;
   color: white;
 }
@@ -56,6 +58,11 @@ a {
   padding: 10px
 }
 
+.email{
+  padding: 5px;
+  margin: 5px
+}
+
 .news-window{
   display: inline-block;
   width: 100%;
@@ -64,7 +71,7 @@ a {
 .article-list{
   border-style: groove;
   border-color: black;
-  width: 40%;
+  width: 30%;
   float: left;
 }
 
@@ -132,6 +139,13 @@ a {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+.my-article-box {
+  border-style: double;
+  border-color: black;
+  margin: 10px;
+  padding: 10px;
 }
 
 .search {

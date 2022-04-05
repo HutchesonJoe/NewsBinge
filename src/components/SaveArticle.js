@@ -3,20 +3,20 @@ import React from "react";
 function SaveArticle({article}){
 
   function handleSave(){
-    console.log(article)
-    fetch("http://localhost:3000/articles/", {
-      method: "POST",
-      header: {
+    const articleData = {
+        title: article.title,
+        source: article.source.name,
+        author: article.author,
+        url: article.url
+    }
+    
+    fetch('http://localhost:3000/articles', {
+      method: 'POST',
+      headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({
-         
-          "title": "Third Article",
-          "url": "This is also an example."
-      })
+      body: JSON.stringify(articleData)
     })
-      .then(r=>r.json())
-      .then(data=>console.log(data))
   }
 
   return (

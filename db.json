@@ -1,16 +1,38 @@
 {
   "articles": [
     {
+      "title": "Amy Schumer Reveals the Oscars Jokes She 'Wasn't Allowed to Say on TV' - TVLine",
+      "source": "TVLine",
+      "author": "Michael Ausiello",
+      "url": "https://tvline.com/2022/04/04/amy-schumer-oscars-jokes-censored-cut/",
+      "id": 4
+    },
+    {
+      "title": "Ketanji Brown Jackson confirmation vote is ‘making history’ says senator – live - The Guardian",
+      "source": "The Guardian",
+      "author": "Vivian Ho, Hugo Lowell, Ed Pilkington, Martin Pengelly",
+      "url": "https://www.theguardian.com/us-news/live/2022/apr/04/ketanji-brown-jackson-supreme-court-confirmation-us-politics-live",
+      "id": 5
+    },
+    {
+      "title": "Hubble Finds a Massive Planet – 9 Times the Size of Jupiter – Forming Through a Violent Process - SciTechDaily",
+      "source": "SciTechDaily",
+      "author": null,
+      "url": "https://scitechdaily.com/hubble-finds-a-massive-planet-9-times-the-size-of-jupiter-forming-through-a-violent-process/",
+      "id": 6
+    }
+  ],
+  "emails": [
+    {
       "id": 1,
-      "title": "Example Article",
-      "url": "This is an example."
+      "email": "yetanotherfake@gmail.com"
     },
     {
-      "id": 2,
-      "title": "Second Article",
-      "url": "This is also an example."
+      "email": "fake@email.com",
+      "id": 2
     },
     {
+      "email": "fake@email.com",
       "id": 3
     }
   ]

@@ -1,8 +1,18 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import MyArticle from "./MyArticle"
 
-function MyArticles(){
+
+function MyArticles({myArticles, setMyArticles}){
+  useEffect(()=>{
+    fetch("http://localhost:3000/articles")
+    .then (r=>r.json())
+    .then (data=>setMyArticles(data))
+  }, [])
+  
+  const myCurrentArticles = myArticles.map(article=><MyArticle article={article} key = {article.id} myArticles={myArticles} setMyArticles={setMyArticles}/>)
+
   return(
-    <div>My Articles</div>
+    <div>{myCurrentArticles}</div>
   )
 }
 

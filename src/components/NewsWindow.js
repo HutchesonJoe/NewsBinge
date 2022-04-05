@@ -2,25 +2,26 @@ import React, {useState} from "react";
 import ArticleList from "./ArticleList";
 import ArticleWindow from "./ArticleWindow";
 
-function NewsWindow({articles, featuredArticle}){
+function NewsWindow({articles, featured, setFeatured, setMyArticles}){
+
   const [chosenArticle, setChosenArticle] = useState(null)
   if (chosenArticle===null){
-    let article = featuredArticle
+    let article = featured
   }
   
-
   function handleChooseArticle(article){
     setChosenArticle(article)
   }
 
   return(
     <div className = "news-window">
-      <ArticleList articles={articles} handleChooseArticle={handleChooseArticle}/>
+      <ArticleList articles={articles} handleChooseArticle={handleChooseArticle} setMyArticles={setMyArticles}/>
       <ArticleWindow 
         article={chosenArticle} 
         articles={articles} 
         setChosenArticle={setChosenArticle} 
-        featuredArticle={featuredArticle}
+        featured={featured}
+        setFeatured={setFeatured}
       />
     </div>
    

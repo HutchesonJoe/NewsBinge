@@ -1,0 +1,8 @@
+import "react" from React;
+
+function MyArticles(){
+  fetch("http://localhost:3000/articles")
+    
+}
+
+export default MyArticles

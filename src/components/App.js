@@ -2,33 +2,37 @@ import React, {useState, useEffect} from "react";
 import { Route, Routes } from "react-router-dom"
 import Header from "./Header";
 import BingeContainer from "./BingeContainer";
+import MyArticles from "./MyArticles";
 import FollowTweets from "./FollowTweets";
 import VisitApi from "./VisitApi";
 import NavBar from "./NavBar"
 import Home from "./Home"
 
 function App(){
-  const [articles, setArticles] = useState([])
+  const [articleList, setArticleList] = useState([])
   const [searchTerm, setSearchTerm] = useState("")
-  const [featuredArticle, setFeaturedArticle] = useState()
-  
+  const [myArticles, setMyArticles] = useState([])
+  const [featured, setFeatured] = useState()
+
   useEffect(()=> {
     fetch ("https://newsapi.org/v2/top-headlines?country=us&apiKey=f54a02baacfc4187b26c3a5bee3f7774")
     .then (r=>r.json())
-    .then (data=>setArticles(data.articles))
-  
+    .then (data=>setArticleList(data.articles))
+    // .then (data=>{
+    //   const randomInt = function (min, max) {
+    //     min = Math.ceil(0);
+    //     max = Math.floor(19);
+    //     return Math.floor(Math.random() * 19)
+    //   }
+    //   setFeatured(articleList[randomInt()])
+    // })
   }, []
   )
 
-  const randomInt = function (min, max) {
-    min = Math.ceil(0);
-    max = Math.floor(19);
-    return Math.floor(Math.random() * 19)
-  }
-  const featured = articles[randomInt()]
+  
   
 
-  const articlesToDisplay = articles.filter((article) => {
+  const articlesToDisplay = articleList.filter((article) => {
     return article.title.toLowerCase().includes(searchTerm)
   })
 
@@ -39,13 +43,15 @@ function App(){
       <Header />
       <NavBar className="NavBar"/>
       <Routes>
-        <Route exact path="/bingecontainer" element={ <BingeContainer articles={articlesToDisplay} setSearchTerm={setSearchTerm} featuredArticle={featured}/>}>
+        <Route exact path="/bingecontainer" element={ <BingeContainer articles={articlesToDisplay} setSearchTerm={setSearchTerm} setMyArticles={setMyArticles} featured={featured} setFeatured={setFeatured}/>}>
+        </Route>
+        <Route exact path="/myarticles" element={ <MyArticles myArticles={myArticles} setMyArticles = {setMyArticles}/>}>
         </Route>
         <Route path="/followtweets" element ={<FollowTweets/>}>
         </Route>
         <Route exact path="/visitapi" element = { <VisitApi/>}>
         </Route>
-        <Route exact path="/" element = {<Home articles={articlesToDisplay} featuredArticle={featured}/>}></Route>
+        <Route exact path="/" element = {<Home articles={articlesToDisplay}/>}></Route>
       </Routes>
     </div>
   )

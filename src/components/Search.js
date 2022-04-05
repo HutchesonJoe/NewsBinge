@@ -2,7 +2,6 @@ import React from "react";
 
 function Search({setSearchTerm}){
   function handleSearchChange(e){
-    console.log(e.target.value)
     setSearchTerm(e.target.value.toLowerCase())
   }
   return (

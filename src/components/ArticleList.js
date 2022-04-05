@@ -1,9 +1,9 @@
 import React from "react";
 import Article from "./Article"
 
-function ArticleList({articles, handleChooseArticle}){
+function ArticleList({articles, handleChooseArticle, setMyArticles}){
 
-  const articleList = articles.map(article => <Article article={article} handleChooseArticle={handleChooseArticle} key={article.title}/>)
+  const articleList = articles.map(article => <Article article={article} handleChooseArticle={handleChooseArticle} key={article.title} setMyArticles={setMyArticles}/>)
 
   return (
     <div className="article-list" >
