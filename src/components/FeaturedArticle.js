@@ -2,14 +2,6 @@ import React, { useEffect } from "react";
 import SaveArticle from "./SaveArticle";
 
 function FeaturedArticle({featured, setFeatured, articles}){
-  useEffect(()=>{
-    const randomInt = function (min, max) {
-          min = Math.ceil(0);
-          max = Math.floor(19);
-          return Math.floor(Math.random() * 19)
-        }
-        setFeatured(articles[randomInt()])
-  },[])
 
   if (featured === null){
     return (

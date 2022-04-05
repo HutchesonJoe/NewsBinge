@@ -16,7 +16,10 @@ function Home({articles, featuredArticle}){
      })
    })
     .then(r=>r.json())
-    .then(data=>console.log(data))
+    .then(data=>{
+      setEmail("")
+      console.log(data)})
+  
   }
 
   function handleChange(e){
@@ -35,7 +38,7 @@ function Home({articles, featuredArticle}){
         </div>
           <form className="email" onSubmit={handleSubmit}>
             <label>Enter email to join mailing list:  </label>
-            <input type="text" placeholder="Email" onChange={handleChange}></input>
+            <input type="text" placeholder="Email" onChange={handleChange} value = {email}></input>
             <button type="submit">enter</button>
           </form>
         {/* <FeaturedArticle articles = {articles} featuredArticle={featuredArticle}/> */}

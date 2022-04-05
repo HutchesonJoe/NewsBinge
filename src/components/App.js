@@ -18,16 +18,17 @@ function App(){
     fetch ("https://newsapi.org/v2/top-headlines?country=us&apiKey=f54a02baacfc4187b26c3a5bee3f7774")
     .then (r=>r.json())
     .then (data=>setArticleList(data.articles))
-    // .then (data=>{
-    //   const randomInt = function (min, max) {
-    //     min = Math.ceil(0);
-    //     max = Math.floor(19);
-    //     return Math.floor(Math.random() * 19)
-    //   }
-    //   setFeatured(articleList[randomInt()])
-    // })
   }, []
   )
+
+  useEffect(()=>{
+    const randomInt = function (min, max) {
+          min = Math.ceil(0);
+          max = Math.floor(19);
+          return Math.floor(Math.random() * 19)
+        }
+        setFeatured(articleList[randomInt()])
+  }, [articleList])
 
   
   
