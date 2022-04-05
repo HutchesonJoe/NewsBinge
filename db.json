@@ -20,6 +20,13 @@
       "author": "Oleksandr Stashevskyi",
       "url": "https://apnews.com/1b84b61ca7b7bf3c31bb856845269efd",
       "id": 8
+    },
+    {
+      "title": "Obama's return to the White House after a 5-year absence - The Washington Post",
+      "source": "The Washington Post",
+      "author": "John Wagner, Mariana Alfaro",
+      "url": "https://www.washingtonpost.com/politics/2022/04/05/obama-biden-healthcare/",
+      "id": 9
     }
   ],
   "emails": [
@@ -42,6 +49,10 @@
     {
       "email": "joehutcheson@gmail.com",
       "id": 5
+    },
+    {
+      "email": "jhutcheson@bmcc.cuny.edu",
+      "id": 6
     }
   ]
 }

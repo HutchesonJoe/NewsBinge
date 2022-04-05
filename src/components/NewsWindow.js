@@ -2,12 +2,9 @@ import React, {useState} from "react";
 import ArticleList from "./ArticleList";
 import ArticleWindow from "./ArticleWindow";
 
-function NewsWindow({articles, featured, setFeatured, setMyArticles}){
+function NewsWindow({articles, featured, setMyArticles}){
 
   const [chosenArticle, setChosenArticle] = useState(null)
-  if (chosenArticle===null){
-    let article = featured
-  }
   
   function handleChooseArticle(article){
     setChosenArticle(article)
@@ -21,7 +18,6 @@ function NewsWindow({articles, featured, setFeatured, setMyArticles}){
         articles={articles} 
         setChosenArticle={setChosenArticle} 
         featured={featured}
-        setFeatured={setFeatured}
       />
     </div>
    

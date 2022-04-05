@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import SaveArticle from "./SaveArticle";
 
-function FeaturedArticle({featured, setFeatured, articles}){
+function FeaturedArticle({featured}){
 
   if (featured === null){
     return (

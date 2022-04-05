@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-function Article({article, handleChooseArticle, setMyArticles}){
+function Article({article, handleChooseArticle}){
   const [read, setRead] = useState(false)
   function handleClick(){
     handleChooseArticle(article)

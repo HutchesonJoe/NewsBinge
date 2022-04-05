@@ -1,15 +1,13 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import FeaturedArticle from "./FeaturedArticle";
 import SaveArticle from "./SaveArticle"
 
-function ArticleWindow({article, articles, featured, setFeatured}){
+function ArticleWindow({article, articles, featured}){
 
- 
- 
   if (article===null){
     return (
       <div>
-        <FeaturedArticle articles={articles} featured={featured} setFeatured={setFeatured}/>
+        <FeaturedArticle articles={articles} featured={featured}/>
       </div>)
   } else {
     return (

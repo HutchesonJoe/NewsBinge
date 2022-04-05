@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import FeaturedArticle from "./FeaturedArticle";
 
-function Home({articles, featuredArticle}){
+function Home({articles}){
   const [email, setEmail] = useState("")
  
   function handleSubmit(e){
@@ -16,10 +16,9 @@ function Home({articles, featuredArticle}){
      })
    })
     .then(r=>r.json())
-    .then(data=>{
+    .then(()=>{
       setEmail("")
-      console.log(data)})
-  
+    })
   }
 
   function handleChange(e){
@@ -41,7 +40,6 @@ function Home({articles, featuredArticle}){
             <input type="text" placeholder="Email" onChange={handleChange} value = {email}></input>
             <button type="submit">enter</button>
           </form>
-        {/* <FeaturedArticle articles = {articles} featuredArticle={featuredArticle}/> */}
       </div>
     )
   } else {

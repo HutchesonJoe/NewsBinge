@@ -3,7 +3,7 @@ import Article from "./Article"
 
 function ArticleList({articles, handleChooseArticle, setMyArticles}){
 
-  const articleList = articles.map(article => <Article article={article} handleChooseArticle={handleChooseArticle} key={article.title} setMyArticles={setMyArticles}/>)
+  const articleList = articles.map(article => <Article article={article} handleChooseArticle={handleChooseArticle} key={article.title}/>)
 
   return (
     <div className="article-list" >
