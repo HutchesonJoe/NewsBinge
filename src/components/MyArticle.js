@@ -15,9 +15,8 @@ function MyArticle({article, myArticles, setMyArticles}){
  
     return (
       <div className = "my-article-box">
-        <h4>{article.title}</h4>
-        <h5>{article.author ? article.author : "Staff"}, <em>{article.source}</em></h5>
-        <h5><a href = {article.url} alt = "article link">Click to visit.</a></h5>
+        <h4 className = "my-article-title">{article.title}</h4>
+        <h5>{article.author ? article.author : "Staff"}, <em>{article.source}</em> | <a href = {article.url} alt = "article link" target="_blank">Click to visit.</a></h5>
         <button onClick={handleRemove} id={article.id}>Remove article from my list.</button>
       </div>
     )

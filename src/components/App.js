@@ -52,7 +52,7 @@ function App(){
         </Route>
         <Route exact path="/visitapi" element = { <VisitApi/>}>
         </Route>
-        <Route exact path="/" element = {<Home articles={articlesToDisplay}/>}></Route>
+        <Route exact path="/" element = {<Home/>}></Route>
       </Routes>
     </div>
   )

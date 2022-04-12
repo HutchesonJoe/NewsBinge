@@ -25,9 +25,7 @@ function Home({articles}){
    setEmail(e.target.value)
   }
 
-  if (articles !== undefined){
-   
-    return (
+   return (
       <div>
         <div className="home-box">
           <p id="welcome-to-newsbinge"><em>Welcome to NewsBinge!</em></p>
@@ -42,10 +40,6 @@ function Home({articles}){
           </form>
       </div>
     )
-  } else {
-    return 
-    <div>Loading news...</div>
-  }
   
 }
 

@@ -5,7 +5,7 @@ import { NavLink }from "react-router-dom";
 function Header(){
   return (
     <div>
-      <NavLink to = "./"><header className="header">NewsBinge</header></NavLink>
+      <NavLink to = "./"><header className="header">#NewsBinge</header></NavLink>
     </div>
     )
 }

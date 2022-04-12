@@ -22,11 +22,18 @@
       "id": 8
     },
     {
-      "title": "Obama's return to the White House after a 5-year absence - The Washington Post",
-      "source": "The Washington Post",
-      "author": "John Wagner, Mariana Alfaro",
-      "url": "https://www.washingtonpost.com/politics/2022/04/05/obama-biden-healthcare/",
+      "title": "Pakistan's parliament votes in opposition leader Shehbaz Sharif as Prime Minister - CNN",
+      "source": "CNN",
+      "author": "Sophia Saifi and Rhea Mogul, CNN",
+      "url": "https://www.cnn.com/2022/04/11/asia/pakistan-prime-minister-shehbaz-sharif-intl-hnk/index.html",
       "id": 9
+    },
+    {
+      "title": "2022 WNBA Mock Draft 2.0: Dream take Rhyne Howard No. 1 after blockbuster trade; Destanni Henderson to Aces - CBS Sports",
+      "source": "CBS Sports",
+      "author": "",
+      "url": "https://www.cbssports.com/wnba/news/2022-wnba-mock-draft-2-0-dream-take-rhyne-howard-no-1-after-blockbuster-trade-destanni-henderson-to-aces/",
+      "id": 10
     }
   ],
   "emails": [
@@ -53,6 +60,10 @@
     {
       "email": "jhutcheson@bmcc.cuny.edu",
       "id": 6
+    },
+    {
+      "email": "joehutcheson@gmail.com",
+      "id": 7
     }
   ]
 }
